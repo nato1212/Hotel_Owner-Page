@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jscript.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <style>
+        body{
+            background-image: url("re.jpeg");
+        }
+
+
+
+        #imageUpload
+        {
+            display: none;
+        }
+
+        #profileImage
+        {
+            cursor: pointer;
+        }
+        .image {
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        }
+
+        .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        }
+
+        #profile-container:hover .image {
+        opacity: 0.3;
+        }
+
+        #profile-container:hover .middle {
+        opacity: 1;
+        }
+
+        .text {
+        font-size: 16px;
+        padding-left: 20px;
+
+        }
+
+
+        #profile-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        #profile-container img {
+            width: 150px;
+            height: 150px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <form id="regForm" oninput='password2.setCustomValidity(password2.value != password1.value ? "Passwords do not match." : "")'>
+                    <h1 id="register">Register</h1>
+                    <div class="all-steps" id="all-steps"> <span class="step"></span> <span class="step"></span> <span class="step"></span> <span class="step"></span> </div>
+                    <div class="tab">
+                        <label class="inputLabel" for="email">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input placeholder="Email" oninput="this.className = ''" name="email">
+                        <label class="inputLabel" for="password">New Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input placeholder="Password" class="inpwd" id="myInput2" type="password" id="newPassword" name="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                         title="Must contain at least one number and one lowercase letter, and 
+                        at least 8 or more characters" required>
+
+                        <label class="inputLabel" for="confirmPassword">Confirm Password</label>
+                        <input placeholder="Confirm Password" class="inpwd" id="myInput3" type="password" id="confirmPassword" name="password2" required>
+
+                    </div>
+                    <div class="tab">
+                        <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+                        <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+                        <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+
+                        <span>Click the avatar to insert your photo</span>
+                        <div id="profile-container">
+                            <image id="profileImage" src="./image/avatar.png" class="image"  />
+                            <span class="text middle">Click</span>
+                        </div>
+                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                    
+                    </div>
+
+                    
+
+
+                    <h1></h1>
+ 
+                    <div class="tab">
+                        <div class="page-wrapper">
+                            <div class="content container-fluid">
+                                <div class="page-header">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h3 class="page-title mt-5">Your hotel</h3> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                            <div class="row formtype">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Hotel name:</label>
+                                                        <input class="form-control" type="text" placeholder="Ayu International Hotel"> </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Hotel star</label>
+                                                        <select class="form-control" id="sel1" name="sellist1">
+                                                            <option>Select</option>
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="form-group" style="width: 200px;">
+                                                        <label>File Upload</label>
+                                                        <div class="custom-file mb-3">
+                                                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Description</label>
+                                                        <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="tab">
+                        <div class="page-wrapper">
+                            <div class="content container-fluid">
+                                <div class="page-header">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h3 class="page-title mt-5">Add one Room. You can customize later.</h3> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                            <div class="row formtype">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Room Number</label>
+                                                        <input class="form-control" type="text" placeholder="BKG-0001"> </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Room Type</label>
+                                                        <select class="form-control" id="sel1" name="sellist1">
+                                                            <option>Select</option>
+                                                            <option>Single</option>
+                                                            <option>Double</option>
+                                                            <option>Quad</option>
+                                                            <option>King</option>
+                                                            <option>Suite</option>
+                                                            <option>Villa</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Food</label>
+                                                        <select class="form-control" id="sel3" name="sellist1">
+                                                            <option>Select</option>
+                                                            <option>Free Breakfast</option>
+                                                            <option>Free Lunch</option>
+                                                            <option>Free Dinner</option>
+                                                            <option>Free Breakfast & Dinner</option>
+                                                            <option>Free Welcome Drink</option>
+                                                            <option>No Free Food</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Bed Count</label>
+                                                        <select class="form-control" id="sel" name="sellist1">
+                                                            <option>Select</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Charges For cancellation</label>
+                                                        <select class="form-control" id="sel4" name="sellist1">
+                                                            <option>Select</option>
+                                                            <option>Free</option>
+                                                            <option>5% Before 24Hours</option>
+                                                            <option>No Cancellation Allow</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group" style="width: 200px;">
+                                                        <label>File Upload</label>
+                                                        <div class="custom-file mb-3">
+                                                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Message</label>
+                                                        <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                                       <h1></h1>
+                    <div class="tab">
+                        <div class="page-wrapper">
+                            <div class="content container-fluid">
+                                <div class="page-header">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h3 class="page-title mt-5">Other accomodation. You can change later.</h3> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input type="checkbox" id="pool" name="pool" value="Pool">
+                                                    <label for="pool">Pool</label><br>
+                                                    <input type="checkbox" id="Spa" name="Spa" value="Spa">
+                                                    <label for="Spa">Spa</label><br>
+                                                    <input type="checkbox" id="GYM" name="Spa" value="GYM">
+                                                    <label for="GYM">GYM</label><br>
+                                                    <input type="checkbox" id="WIFI" name="WIFI" value="WIFI">
+                                                    <label for="WIFI">WIFI</label><br><br>
+                                            </div>
+                                        </div>
+
+                                                <div class="col-md-12">
+                                                    <div class="custom-file mb-3">
+                                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="thanks-message text-center" id="text-message"> <img src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">
+                        <h3>Thanks for your information!</h3> <span>Your information has been saved! we will contact you shortly!</span>
+                    </div>
+                    <div style="overflow:auto;" id="nextprevious">
+                        <div style="float:right;"> <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          var url = window.location.href;
+          $(".navbar-nav .nav-link").each(function () {
+            if (url == (this.href)) {
+              $(this).closest("li").addClass("active");
+              $(this).closest("li").parent().parent().addClass("active");
+            }
+          });
+  
+          $("#profileImage").click(function(e) {
+              $("#imageUpload").click();
+          });
+  
+          function fasterPreview( uploader ) {
+              if ( uploader.files && uploader.files[0] ){
+                    $('#profileImage').attr('src', 
+                      window.URL.createObjectURL(uploader.files[0]) );
+              }
+          }
+  
+          $("#imageUpload").change(function(){
+              fasterPreview( this );
+          });
+  
+  
+        });
+    </script>
+  
+</body>
+</html>
