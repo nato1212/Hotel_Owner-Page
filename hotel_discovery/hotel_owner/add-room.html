@@ -12,29 +12,37 @@
 	<link rel="stylesheet" href="../css/feathericon.min.css">
 	<link rel="stylesheet" href="../plugins/morris/morris.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
-	<link rel="stylesheet" href="../css/style.css"> 
+	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/add-room.css">
 </head>
+
 <body>
-    <div class="main-wrapper">
-        <div class="header">
+	<div class="main-wrapper">
+		<div class="header">
 			<div class="header-left">
-				<a href="index.html" class="logo"> <img src="../image/nato.jpg" width="50" height="70" alt="logo"> <span class="logoclass">HOTEL</span> </a>
-				<a href="index.html" class="logo logo-small"> <img src="../image/nato.jpg" alt="Logo" width="30" height="30"> </a>
+				<a href="index.html" class="logo"> <img src="../image/nato.jpg" width="50" height="70" alt="logo"> <span
+						class="logoclass">HOTEL</span> </a>
+				<a href="index.html" class="logo logo-small"> <img src="../image/nato.jpg" alt="Logo" width="30"
+						height="30"> </a>
 			</div>
-            <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+			<a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
 			<a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
 			<ul class="nav user-menu">
 				<li class="nav-item dropdown has-arrow">
-					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="../image/nato.jpg" width="31" alt="Soeng Souy"></span> </a>
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
+								class="rounded-circle" src="../image/nato.jpg" width="31" alt="Soeng Souy"></span> </a>
 					<div class="dropdown-menu">
 						<div class="user-header">
-							<div class="avatar avatar-sm"> <img src="../image/nato.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+							<div class="avatar avatar-sm"> <img src="../image/nato.jpg" alt="User Image"
+									class="avatar-img rounded-circle"> </div>
 							<div class="user-text">
 								<h6>Natanan Amsalu</h6>
 								<p class="text-muted mb-0">Administrator</p>
 							</div>
-						</div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item" href="settings.html">Account Settings</a> <a class="dropdown-item" href="login.html">Logout</a> </div>
+						</div> <a class="dropdown-item" href="profile.html">My Profile</a> 
+							<a class="dropdown-item"
+							href="login.html">Logout</a>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -42,22 +50,24 @@
 			<div class="sidebar-inner slimscroll">
 				<div id="sidebar-menu" class="sidebar-menu">
 					<ul>
-                        <li> <a href="index.html"><i class="fa fa-home"></i> <span>Home</span></a> </li>
+						<li> <a href="index.html"><i class="fa fa-home"></i> <span>Home</span></a> </li>
 						<li class="list-divider"></li>
-						<li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
+						<li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span
+									class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="progress-booking.html"> On progress</a></li>
 								<li><a href="history-booking.html"> History</a></li>
 							</ul>
 						</li>
-						<li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
+						<li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span
+									class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="all-rooms.html">All Rooms </a></li>
 								<li><a href="edit-room.html"> Edit Rooms </a></li>
 								<li><a class="active" href="add-room.html"> Add Rooms </a></li>
 							</ul>
 						</li>
-                        
+
 					</ul>
 				</div>
 			</div>
@@ -67,7 +77,8 @@
 				<div class="page-header">
 					<div class="row align-items-center">
 						<div class="col">
-							<h3 class="page-title mt-5">Add Room</h3> </div>
+							<h3 class="page-title mt-5">Add Room</h3>
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -77,7 +88,8 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Room Number</label>
-										<input class="form-control" type="text"> </div>
+										<input class="form-control" type="text">
+									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
@@ -102,10 +114,11 @@
 										</select>
 									</div>
 								</div>
-                                <div class="col-md-4">
+								<div class="col-md-4">
 									<div class="form-group">
 										<label>Total number of this type room</label>
-										<input type="number" class="form-control" id="usr"> </div>
+										<input type="number" class="form-control" id="usr">
+									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
@@ -124,7 +137,8 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Reservation price for this type room</label><br>
-										<input type="number" class="form-control" id="usr" style="width: 100px; float: left;">
+										<input type="number" class="form-control" id="usr"
+											style="width: 100px; float: left;">
 										<span>Birr</span>
 									</div>
 								</div>
@@ -143,7 +157,8 @@
 									<div class="form-group">
 										<label>File Upload</label>
 										<div class="custom-file mb-3">
-											<input type="file" class="custom-file-input" id="customFile" name="filename">
+											<input type="file" class="custom-file-input" id="customFile"
+												name="filename">
 											<label class="custom-file-label" for="customFile">Choose file</label>
 										</div>
 									</div>
@@ -155,13 +170,13 @@
 											<input type="checkbox" id="pool" name="pool" value="Pool">
 											<label for="pool">Pool</label>
 										</div>
-								
-										
+
+
 										<div class="checkboxinp">
 											<input type="checkbox" id="Spa" name="Spa" value="Spa">
 											<label for="Spa">Spa</label>
 										</div>
-										
+
 										<div class="checkboxinp">
 											<input type="checkbox" id="GYM" name="Spa" value="GYM">
 											<label for="GYM">GYM</label>
@@ -176,7 +191,8 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Description</label>
-										<textarea id="textareadesc" class="form-control" rows="5" id="comment" name="text"></textarea>
+										<textarea id="textareadesc" class="form-control" rows="5" id="comment"
+											name="text"></textarea>
 									</div>
 								</div>
 							</div>
@@ -205,11 +221,11 @@
 	<script src="../js/bootstrap-datetimepicker.min.js"></script>
 	<script src="../js/script.js"></script>
 	<script>
-	$(function() {
-		$('#datetimepicker3').datetimepicker({
-			format: 'LT'
+		$(function () {
+			$('#datetimepicker3').datetimepicker({
+				format: 'LT'
+			});
 		});
-	});
 	</script>
 </body>
 

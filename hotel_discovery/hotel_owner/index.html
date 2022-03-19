@@ -10,29 +10,38 @@
 	<link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="../css/feathericon.min.css">
 	<link rel="stylesheet" href="../plugins/morris/morris.css">
-	<link rel="stylesheet" href="../css/style.css"> </head>
+	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/hotel_owner.css">
+
+
+</head>
 
 <body>
 	<div class="main-wrapper">
 		<div class="header">
 			<div class="header-left">
-				<a href="index.html" class="logo"> <img src="../image/nato.jpg" width="50" height="70" alt="logo"> <span class="logoclass">HOTEL</span> </a>
-				<a href="index.html" class="logo logo-small"> <img src="../image/nato.jpg" alt="Logo" width="30" height="30"> </a>
+				<a href="index.html" class="logo"> <img src="../image/nato.jpg" width="50" height="70" alt="logo"> <span
+						class="logoclass">HOTEL</span> </a>
+				<a href="index.html" class="logo logo-small"> <img src="../image/nato.jpg" alt="Logo" width="30"
+						height="30"> </a>
 			</div>
-            <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+			<a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
 			<a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
 			<ul class="nav user-menu">
 				<li class="nav-item dropdown has-arrow">
-					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="../image/nato.jpg" width="31" alt="Soeng Souy"></span> </a>
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
+								class="rounded-circle" src="../image/nato.jpg" width="31" alt="Soeng Souy"></span> </a>
 					<div class="dropdown-menu">
 						<div class="user-header">
-							<div class="avatar avatar-sm"> <img src="../image/nato.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+							<div class="avatar avatar-sm"> <img src="../image/nato.jpg" alt="User Image"
+									class="avatar-img rounded-circle"> </div>
 							<div class="user-text">
 								<h6>Natanan Amsalu</h6>
 								<p class="text-muted mb-0">Administrator</p>
 							</div>
-						</div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item" href="settings.html">Account Settings</a> <a class="dropdown-item" href="login.html">Logout</a> </div>
+						</div> <a class="dropdown-item" href="profile.html">My Profile</a>  <a class="dropdown-item"
+							href="login.html">Logout</a>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -42,20 +51,22 @@
 					<ul>
 						<li class="active"> <a href="index.html"><i class="fa fa-home"></i> <span>Home</span></a> </li>
 						<li class="list-divider"></li>
-						<li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
+						<li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span
+									class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="progress-booking.html"> On progress</a></li>
 								<li><a href="history-booking.html"> History</a></li>
 							</ul>
 						</li>
-						<li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
+						<li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span
+									class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="all-rooms.html">All Rooms </a></li>
 								<li><a href="edit-room.html"> Edit Rooms </a></li>
 								<li><a href="add-room.html"> Add Rooms </a></li>
 							</ul>
 						</li>
-                        
+
 					</ul>
 				</div>
 			</div>
@@ -67,22 +78,24 @@
 						<h3 class="page-title mt-3">Welcome Natanan Amsalu!</h3>
 					</div>
 				</div>
-			</div>				
+			</div>
 			<form action="#" method="post">
 				<div class="infoNote">
-					<p><strong>Note!</strong> You can edit your profile picture of your hotel, description and others down below.</p>
+					<p><strong>Note!</strong> You can edit your profile picture of your hotel, description and others
+						down below.</p>
 				</div>
-				<div id="rowhotelProfile" >
+				<div id="rowhotelProfile">
 					<div class="columnhotelProfile">
 						<h3>Change profile picture of your hotel appear on top</h3>
 						<div class="warning">
 							<p><strong>Edit!</strong> Click the image to change profile picture of your hotel</p>
 						</div>
 						<div id="profile-container">
-							<image id="profileImage" src="../image/ayuOther1.jpeg" class="image"  />
+							<image id="profileImage" src="../image/ayuOther1.jpeg" class="image" />
 							<span class="text middle">Update</span>
 						</div>
-						<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+						<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
+							capture>
 					</div>
 					<div class="columnhotelProfile" style="border-left: solid green; height: 420px;">
 						<h3>Description</h3>
@@ -92,7 +105,7 @@
 						<textarea id="descriptionHotel" name="descriptionHotel" spellcheck="false">Ayu Int Hotel is one of the most recognizable and Luxuries but affordable hotel located in Adama Rift-valley area of Ethiopia, 40 – 45 minutes drive from Addis Ababa using the new highway express. Our assets are first-class rooms with breathtaking views, excellent service and genuine hospitality. We are a home for your unforgettable time.
 						</textarea>
 					</div>
-				</div>    
+				</div>
 				<br><br><br>
 				<center>
 					<button type="submit" class="submitButton">
@@ -104,7 +117,7 @@
 				</center>
 			</form>
 		</div>
-					
+
 	</div>
 	<footer style="background-color: black; padding: 5px;">
 	</footer>
