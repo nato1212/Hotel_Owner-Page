@@ -14,6 +14,59 @@
 	<link rel="stylesheet" href="../plugins/morris/morris.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="../css/style.css"> </head>
+	<link rel="stylesheet" href="../css/hotel_owner.css">
+
+    <style>
+        #imageUpload
+        {
+            display: none;
+        }
+
+        #profileImage
+        {
+            cursor: pointer;
+        }
+        .image {
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        }
+
+        .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        }
+
+        #profile-container:hover .image {
+        opacity: 0.3;
+        }
+
+        #profile-container:hover .middle {
+        opacity: 1;
+        }
+
+        .text {
+        font-size: 16px;
+        padding-left: 20px;
+
+        }
+
+
+        #profile-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        #profile-container img {
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
 
 </head>
 
@@ -59,7 +112,6 @@
 									class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a class="active" href="all-rooms.html">All Rooms </a></li>
-								<li><a href="edit-room.html"> Edit Rooms </a></li>
 								<li><a href="add-room.html"> Add Rooms </a></li>
 							</ul>
 						</li>
@@ -86,129 +138,241 @@
                     <div class="col-sm-12">
                         <section class="room py-5">
                             <div class="container">
+                                <div class="infoNote">
+                                    <p><strong>Note!</strong> You can edit your hotel rooms content here by clicking it.</p>
+                                </div>
                                 <div class="row  mt-5">
-
                                     <div class="col-lg-6">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-muted text-uppercase text-center">Single</h5>
-                                                <h6 class="card-price text-center mt-3">$15<span class="period"></span>
-                                                </h6>
-                                                <hr>
-                                                <ul class="fa-ul">
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
-                                                        Breakfast</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Air
-                                                        Conditioning</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Laundry
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
-                                                    </li>
-                                                </ul>
-                                                <a href="edit-room.html"
-                                                    class="btn btn-block btn-primary text-uppercase">Edit</a>
-                                            </div>
+                                            <form>
+                                                <div class="card-body">
+                                                    <h6 class="card-price text-center mt-3" contenteditable="True">Room number <span class="period">&nbsp;0023</span></h6>
+                                                    <label>Room Type</label>
+                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                        <option >Single</option>
+                                                        <option >Double</option>
+                                                        <option  selected>Triple</option>
+                                                        <option >Quad</option>
+                                                        <option >Queen</option>
+                                                        <option >King</option>
+                                                        <option >Twin</option>
+                                                        <option >Double-double</option>
+                                                        <option >Studio</option>
+                                                        <option >Suite</option>
+                                                        <option >Apartment</option>
+                                                        <option >Connecting-room</option>
+                                                        <option >Cabana</option>
+                                                        <option >Family</option>
+                                                        <option >Villa</option>
+                                                    </select>                                                
+                                                    <div class="form-group" style="float: left;" >
+                                                        <div id="profile-container">
+                                                            <image id="profileImage" src="../image/ayuRoom4.jpeg" class="image" />
+                                                            <span class="text middle">Click</span>
+                                                        </div>
+                                                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                    </div>
+                                                    <h6 class="card-price text-center mt-3" >Total number&nbsp;<span class="period" contenteditable="True">5</span></h6>                                                    <h6 class="card-price text-center mt-3" >Price&nbsp;<span class="period" contenteditable="True">$15</span></h6>
+                                                    <h6 class="card-price text-center mt-3" >Other accomodation</h6>
+                                                    <ul class="fa-ul" style="padding-left: 150px;" contenteditable="true">
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
+                                                            Breakfast</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
+                                                        </li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Pool</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-block btn-primary text-uppercase">Save</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-muted text-uppercase text-center">Double</h5>
-                                                <h6 class="card-price text-center mt-3">$25<span class="period"></span>
-                                                </h6>
-                                                <hr>
-                                                <ul class="fa-ul">
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
-                                                        Breakfast</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Air
-                                                        Conditioning</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Laundry
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
-                                                    </li>
-                                                </ul>
-                                                <a href="edit-room.html"
-                                                    class="btn btn-block btn-primary text-uppercase">Edit</a>
-                                            </div>
+                                            <form>
+                                                <div class="card-body">
+                                                    <h6 class="card-price text-center mt-3" contenteditable="True">Room number <span class="period">&nbsp;0023</span></h6>
+                                                    <label>Room Type</label>
+                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                        <option >Single</option>
+                                                        <option >Double</option>
+                                                        <option  selected>Triple</option>
+                                                        <option >Quad</option>
+                                                        <option >Queen</option>
+                                                        <option >King</option>
+                                                        <option >Twin</option>
+                                                        <option >Double-double</option>
+                                                        <option >Studio</option>
+                                                        <option >Suite</option>
+                                                        <option >Apartment</option>
+                                                        <option >Connecting-room</option>
+                                                        <option >Cabana</option>
+                                                        <option >Family</option>
+                                                        <option >Villa</option>
+                                                    </select>                                                
+                                                    <div class="form-group" style="float: left;" >
+                                                        <div id="profile-container">
+                                                            <image id="profileImage" src="../image/ayuRoom4.jpeg" class="image" />
+                                                            <span class="text middle">Click</span>
+                                                        </div>
+                                                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                    </div>
+                                                    <h6 class="card-price text-center mt-3" >Total number&nbsp;<span class="period" contenteditable="True">5</span></h6>                                                    <h6 class="card-price text-center mt-3" >Price&nbsp;<span class="period" contenteditable="True">$15</span></h6>
+                                                    <h6 class="card-price text-center mt-3" >Other accomodation</h6>
+                                                    <ul class="fa-ul" style="padding-left: 150px;" contenteditable="true">
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
+                                                            Breakfast</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
+                                                        </li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Pool</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-block btn-primary text-uppercase">Save</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-muted text-uppercase text-center">Family</h5>
-                                                <h6 class="card-price text-center mt-3">$35<span class="period"></span>
-                                                </h6>
-                                                <hr>
-                                                <ul class="fa-ul">
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
-                                                        Breakfast</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Air
-                                                        Conditioning</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Laundry
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
-                                                    </li>
-                                                </ul>
-                                                <a href="edit-room.html"
-                                                    class="btn btn-block btn-primary text-uppercase">Edit</a>
-                                            </div>
+                                            <form>
+                                                <div class="card-body">
+                                                    <h6 class="card-price text-center mt-3" contenteditable="True">Room number <span class="period">&nbsp;0023</span></h6>
+                                                    <label>Room Type</label>
+                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                        <option >Single</option>
+                                                        <option >Double</option>
+                                                        <option  selected>Triple</option>
+                                                        <option >Quad</option>
+                                                        <option >Queen</option>
+                                                        <option >King</option>
+                                                        <option >Twin</option>
+                                                        <option >Double-double</option>
+                                                        <option >Studio</option>
+                                                        <option >Suite</option>
+                                                        <option >Apartment</option>
+                                                        <option >Connecting-room</option>
+                                                        <option >Cabana</option>
+                                                        <option >Family</option>
+                                                        <option >Villa</option>
+                                                    </select>                                                
+                                                    <div class="form-group" style="float: left;" >
+                                                        <div id="profile-container">
+                                                            <image id="profileImage" src="../image/ayuRoom4.jpeg" class="image" />
+                                                            <span class="text middle">Click</span>
+                                                        </div>
+                                                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                    </div>
+                                                    <h6 class="card-price text-center mt-3" >Total number&nbsp;<span class="period" contenteditable="True">5</span></h6>                                                    <h6 class="card-price text-center mt-3" >Price&nbsp;<span class="period" contenteditable="True">$15</span></h6>
+                                                    <h6 class="card-price text-center mt-3" >Other accomodation</h6>
+                                                    <ul class="fa-ul" style="padding-left: 150px;" contenteditable="true">
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
+                                                            Breakfast</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
+                                                        </li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Pool</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-block btn-primary text-uppercase">Save</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-muted text-uppercase text-center">Double</h5>
-                                                <h6 class="card-price text-center mt-3">$25<span class="period"></span>
-                                                </h6>
-                                                <hr>
-                                                <ul class="fa-ul">
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
-                                                        Breakfast</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Air
-                                                        Conditioning</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Laundry
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
-                                                    </li>
-                                                </ul>
-                                                <a href="edit-room.html"
-                                                    class="btn btn-block btn-primary text-uppercase">Edit</a>
-                                            </div>
+                                            <form>
+                                                <div class="card-body">
+                                                    <h6 class="card-price text-center mt-3" contenteditable="True">Room number <span class="period">&nbsp;0023</span></h6>
+                                                    <label>Room Type</label>
+                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                        <option >Single</option>
+                                                        <option >Double</option>
+                                                        <option  selected>Triple</option>
+                                                        <option >Quad</option>
+                                                        <option >Queen</option>
+                                                        <option >King</option>
+                                                        <option >Twin</option>
+                                                        <option >Double-double</option>
+                                                        <option >Studio</option>
+                                                        <option >Suite</option>
+                                                        <option >Apartment</option>
+                                                        <option >Connecting-room</option>
+                                                        <option >Cabana</option>
+                                                        <option >Family</option>
+                                                        <option >Villa</option>
+                                                    </select>                                                
+                                                    <div class="form-group" style="float: left;" >
+                                                        <div id="profile-container">
+                                                            <image id="profileImage" src="../image/ayuRoom4.jpeg" class="image" />
+                                                            <span class="text middle">Click</span>
+                                                        </div>
+                                                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                    </div>
+                                                    <h6 class="card-price text-center mt-3" >Total number&nbsp;<span class="period" contenteditable="True">5</span></h6>                                                    <h6 class="card-price text-center mt-3" >Price&nbsp;<span class="period" contenteditable="True">$15</span></h6>
+                                                    <h6 class="card-price text-center mt-3" >Other accomodation</h6>
+                                                    <ul class="fa-ul" style="padding-left: 150px;" contenteditable="true">
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
+                                                            Breakfast</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
+                                                        </li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Pool</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-block btn-primary text-uppercase">Save</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-muted text-uppercase text-center">Family</h5>
-                                                <h6 class="card-price text-center mt-3">$35<span class="period"></span>
-                                                </h6>
-                                                <hr>
-                                                <ul class="fa-ul">
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
-                                                        Breakfast</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Air
-                                                        Conditioning</li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Laundry
-                                                    </li>
-                                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
-                                                    </li>
-                                                </ul>
-                                                <a href="edit-room.html"
-                                                    class="btn btn-block btn-primary text-uppercase">Edit</a>
-                                            </div>
+                                            <form>
+                                                <div class="card-body">
+                                                    <h6 class="card-price text-center mt-3" contenteditable="True">Room number <span class="period">&nbsp;0023</span></h6>
+                                                    <label>Room Type</label>
+                                                    <select class="form-control" id="sel1" name="sellist1">
+                                                        <option >Single</option>
+                                                        <option >Double</option>
+                                                        <option  selected>Triple</option>
+                                                        <option >Quad</option>
+                                                        <option >Queen</option>
+                                                        <option >King</option>
+                                                        <option >Twin</option>
+                                                        <option >Double-double</option>
+                                                        <option >Studio</option>
+                                                        <option >Suite</option>
+                                                        <option >Apartment</option>
+                                                        <option >Connecting-room</option>
+                                                        <option >Cabana</option>
+                                                        <option >Family</option>
+                                                        <option >Villa</option>
+                                                    </select>                                                
+                                                    <div class="form-group" style="float: left;" >
+                                                        <div id="profile-container">
+                                                            <image id="profileImage" src="../image/ayuRoom4.jpeg" class="image" />
+                                                            <span class="text middle">Click</span>
+                                                        </div>
+                                                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                    </div>
+                                                    <h6 class="card-price text-center mt-3" >Total number&nbsp;<span class="period" contenteditable="True">5</span></h6>                                                    <h6 class="card-price text-center mt-3" >Price&nbsp;<span class="period" contenteditable="True">$15</span></h6>
+                                                    <h6 class="card-price text-center mt-3" >Other accomodation</h6>
+                                                    <ul class="fa-ul" style="padding-left: 150px;" contenteditable="true">
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free
+                                                            Breakfast</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Wifi
+                                                        </li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Pool</li>
+                                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Parking
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-block btn-primary text-uppercase">Save</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                     
@@ -231,6 +395,35 @@
 	<script src="../plugins/raphael/raphael.min.js"></script>
 	<script src="../js/bootstrap-datetimepicker.min.js"></script>
 	<script src="../js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+          var url = window.location.href;
+          $(".navbar-nav .nav-link").each(function () {
+            if (url == (this.href)) {
+              $(this).closest("li").addClass("active");
+              $(this).closest("li").parent().parent().addClass("active");
+            }
+          });
+  
+          $("#profileImage").click(function(e) {
+              $("#imageUpload").click();
+          });
+  
+          function fasterPreview( uploader ) {
+              if ( uploader.files && uploader.files[0] ){
+                    $('#profileImage').attr('src', 
+                      window.URL.createObjectURL(uploader.files[0]) );
+              }
+          }
+  
+          $("#imageUpload").change(function(){
+              fasterPreview( this );
+          });
+  
+  
+        });
+    </script>
 </body>
 
 </html>
