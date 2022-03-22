@@ -80,3 +80,21 @@ opacity: 1;
     width: 500px;
     height: 350px;
 }
+
+.submitButton {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 24px;
+  }
+  
+.submitButton:hover {
+    background-color: #8a8787;
+}
